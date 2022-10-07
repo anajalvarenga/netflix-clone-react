@@ -53,8 +53,8 @@ const getHomeList = async () => {
     ];
 };
 
-const tmdb = {
+const Tmdb = {
     getHomeList,
 };
 
-export default tmdb;
+export default Tmdb;
