@@ -64,6 +64,14 @@ const App = () => {
                 Direitos de imagem Netflix <br />
                 Fonte de dados Themoviedb.org
             </footer>
+            {movieList <= 0 && (
+                <div className="loading">
+                    <img
+                        src="https://i.gifer.com/8Etj.gif"
+                        alt="carregando..."
+                    />
+                </div>
+            )}
         </div>
     );
 };
