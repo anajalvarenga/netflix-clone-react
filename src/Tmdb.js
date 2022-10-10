@@ -53,8 +53,28 @@ const getHomeList = async () => {
     ];
 };
 
+const getMovieInfo = async (movieId, type) => {
+    let info = {};
+
+    if(movieId) {
+        switch (type) {
+            case 'movie':
+                info = await basicFetch(`/movie/${movieId}?${languageAndApiKey}`);
+                break;
+            case 'tv':
+                info = await basicFetch(`/tv/${movieId}?${languageAndApiKey}`);
+                break;
+            default:
+                return null;
+        }
+    }
+
+    return info;
+}
+
 const Tmdb = {
     getHomeList,
+    getMovieInfo
 };
 
 export default Tmdb;
