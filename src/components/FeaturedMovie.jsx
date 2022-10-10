@@ -5,6 +5,11 @@ const FeaturedMovie = ({ item }) => {
     const year = item.first_air_date.slice(0, 4);
     const genres = item.genres.map((genre) => genre.name).join(", ");
 
+    let description = item.overview;
+    if(description.length > 200) {
+        description = description.substring(0, 200) + '...';
+    }
+
     return (
         <section
             className="featured"
@@ -27,7 +32,7 @@ const FeaturedMovie = ({ item }) => {
                             {item.number_of_seasons !== 1 && "s"}
                         </div>
                     </div>
-                    <div className="featured__description">{item.overview}</div>
+                    <div className="featured__description">{description}</div>
                     <div className="featured__buttons">
                         <a
                             href={`/watch/${item.id}`}
