@@ -59,3 +59,10 @@
     opacity: 1;
     transition: all ease 0.5s;
 }
+
+@media (max-width: 760px) {
+    .movie-row__left,
+    .movie-row__right {
+        opacity: 1;
+    }
+}

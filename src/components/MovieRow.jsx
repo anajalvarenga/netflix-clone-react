@@ -6,7 +6,7 @@ import { NavigateNext } from "@material-ui/icons";
 const MovieRow = ({ title, items }) => {
     const listWidth = items.results.length * 150;
 
-    const [scrollX, setScrollX] = useState(-400);
+    const [scrollX, setScrollX] = useState(0);
 
     const handleLeftArrow = () => {
         let newScrollX = scrollX + Math.round(window.innerWidth / 4);
